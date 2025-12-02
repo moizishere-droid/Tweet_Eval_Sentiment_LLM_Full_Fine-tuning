@@ -3,6 +3,14 @@
 A **task-specific fine-tuned Transformer model** for classifying the sentiment of tweets into **Negative, Neutral, or Positive**. This project demonstrates **full LLM fine-tuning**, dataset preprocessing, and deployment using Hugging Face Transformers and Datasets.
 
 ---
+🌐 Model Link
+
+You can view or download the fine-tuned model here:https://huggingface.co/Abdulmoiz123/Tweet_Eval_Sentiment_LLM_Full_Fine-tuning
+Hugging Face: Tweet Sentiment Classifier
+
+Users can load the model directly into their code using Hugging Face Transformers pipeline.
+
+---
 
 ## 🚀 Highlights
 
