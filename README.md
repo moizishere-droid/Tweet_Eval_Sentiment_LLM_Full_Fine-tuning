@@ -1,14 +1,6 @@
 # 🐦 Tweet Sentiment Classifier
 
-A **task-specific fine-tuned Transformer model** for classifying the sentiment of tweets into **Negative, Neutral, or Positive**. This project demonstrates **full LLM fine-tuning**, dataset preprocessing, and deployment using Hugging Face Transformers and Datasets.
-
----
-🌐 Model Link
-
-You can view or download the fine-tuned model here:https://huggingface.co/Abdulmoiz123/Tweet_Eval_Sentiment_LLM_Full_Fine-tuning
-Hugging Face: Tweet Sentiment Classifier
-
-Users can load the model directly into their code using Hugging Face Transformers pipeline.
+A **task-specific fine-tuned Transformer model** for classifying the sentiment of tweets into **Negative, Neutral, or Positive**. This project demonstrates full LLM fine-tuning, dataset preprocessing, and deployment using Hugging Face Transformers and Datasets.
 
 ---
 
@@ -17,7 +9,7 @@ Users can load the model directly into their code using Hugging Face Transformer
 * **Full Fine-Tuning of DistilBERT**: Adapted a pre-trained language model to a specific task (tweet sentiment classification).
 * **Task-Specific Dataset**: Fine-tuned on the `tweet_eval` sentiment dataset with train/validation/test splits.
 * **Efficient Tokenization**: Batched tokenization with truncation and padding for optimized GPU usage.
-* **Performance Metrics**: Evaluated using **accuracy**, achieving **74.05%** on the validation set.
+* **Performance Metrics**: Achieved **74.05% accuracy** on validation data after 3 epochs.
 * **Easy Deployment**: Ready-to-use inference pipeline with Hugging Face `pipeline`.
 * **GPU-Accelerated Training**: Supports mixed-precision (FP16) training for faster execution.
 
@@ -56,6 +48,27 @@ Users can load the model directly into their code using Hugging Face Transformer
 
 ---
 
+## 🌐 Hugging Face Model Link
+
+You can view or download the fine-tuned model here:
+[**Tweet Sentiment Classifier - Hugging Face**](https://huggingface.co/Abdulmoiz123/Tweet_Eval_Sentiment_LLM_Full_Fine-tuning)
+
+**Load directly in code:**
+
+```python
+from transformers import pipeline
+
+classifier = pipeline(
+    "text-classification",
+    model="Abdulmoiz123/Tweet_Eval_Sentiment_LLM_Full_Fine-tuning",
+    tokenizer="Abdulmoiz123/Tweet_Eval_Sentiment_LLM_Full_Fine-tuning"
+)
+
+result = classifier("I love this product!")
+print(result)
+```
+---
+
 ## 🌟 Key Learning & Focus
 
 By building this project, I focused on:
@@ -71,11 +84,9 @@ By building this project, I focused on:
 
 ## 📌 Results
 
-* The classifier can correctly predict the sentiment of tweets with **~74% accuracy** after 3 epochs.
-* The project highlights my ability to:
+* The classifier predicts tweet sentiment with **~74% accuracy** after 3 epochs.
+* Demonstrates my ability to:
 
   * Work with **pre-trained language models**
   * Adapt them to **domain-specific tasks**
-  * Build a **reusable ML pipeline**
-
-
+  * Build a **reusable NLP pipeline**
